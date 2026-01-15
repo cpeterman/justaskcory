@@ -16,25 +16,45 @@
 <body class="bg-gray-50 text-gray-900">
 
 <!-- NAV -->
-<header class="bg-white border-b sticky top-0 z-50">
-  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+<header class="bg-white sticky top-0 z-50 border-b border-gray-200">
+  <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+
+    <!-- BRAND -->
     <div class="flex items-center gap-3">
-      <img src="assets/logos/logo-icon.png" class="w-10 h-10" alt="Just Ask Cory">
-      <span class="font-bold text-lg">Just Ask Cory</span>
+      <img
+        src="assets/logos/logo-icon.png"
+        alt="Just Ask Cory"
+        class="w-9 h-9"
+      />
+      <span class="font-bold text-lg tracking-tight">
+        Just Ask Cory
+      </span>
     </div>
-    <nav class="flex gap-6 text-sm font-semibold">
-      <a href="projects.html">Projects</a>
-      <a href="media.html">Media</a>
-      <a href="#contact" class="bg-orange-500 text-white px-4 py-2 rounded-full">
+
+    <!-- NAV -->
+    <nav class="hidden md:flex items-center gap-8 text-sm font-semibold">
+      <a href="projects.html" class="text-gray-700 hover:text-blue-600 transition">
+        Projects
+      </a>
+      <a href="media.html" class="text-gray-700 hover:text-blue-600 transition">
+        Media
+      </a>
+      <a
+        href="#contact"
+        class="ml-2 bg-orange-500 text-white px-5 py-2 rounded-full hover:bg-orange-600 transition"
+      >
         Get Help
       </a>
     </nav>
+
   </div>
 </header>
+<div class="h-1 bg-gradient-to-r from-blue-600 to-blue-800"></div>
+
 
 <!-- HERO -->
 <section class="bg-gradient-to-br from-blue-600 to-blue-800 text-white">
-  <div class="max-w-7xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-12 items-center">
+<div class="max-w-7xl mx-auto px-6 py-16 grid lg:grid-cols-2 gap-10 items-center">
 
     <!-- LEFT -->
     <div>
