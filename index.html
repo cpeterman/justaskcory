@@ -1,118 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Just Ask Cory | Your Local Helping Hand</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
-    body { font-family: 'Inter', sans-serif; }
+    body { font-family: Inter, sans-serif; }
+    .nav-link { color:#374151; transition:.2s; }
+    .nav-link:hover { color:#2563eb; }
+    .nav-link.active { color:#2563eb; font-weight:700; }
   </style>
 </head>
 
 <body class="bg-gray-50 text-gray-900">
 
-<!-- NAV -->
-<header class="bg-white sticky top-0 z-50 border-b border-gray-200">
+<!-- HEADER -->
+<header id="site-header" class="bg-white sticky top-0 z-50 border-b border-gray-200 transition-shadow">
   <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
 
-    <!-- BRAND -->
     <div class="flex items-center gap-3">
-      <img
-        src="assets/logos/logo-icon.png"
-        alt="Just Ask Cory"
-        class="w-9 h-9"
-      />
-      <span class="font-bold text-lg tracking-tight">
-        Just Ask Cory
-      </span>
+      <img src="assets/logos/logo-icon.png" class="w-9 h-9">
+      <span class="font-bold text-lg tracking-tight">Just Ask Cory</span>
     </div>
 
-    <!-- NAV -->
     <nav class="hidden md:flex items-center gap-8 text-sm font-semibold">
-      <a href="projects.html" class="text-gray-700 hover:text-blue-600 transition">
-        Projects
-      </a>
-      <a href="media.html" class="text-gray-700 hover:text-blue-600 transition">
-        Media
-      </a>
-      <a
-        href="#contact"
-        class="ml-2 bg-orange-500 text-white px-5 py-2 rounded-full hover:bg-orange-600 transition"
-      >
+      <a href="projects.html" class="nav-link">Projects</a>
+      <a href="media.html" class="nav-link">Media</a>
+      <a href="#contact" class="ml-2 bg-orange-500 text-white px-5 py-2 rounded-full hover:bg-orange-600">
         Get Help
       </a>
     </nav>
 
+    <button id="menu-btn" class="md:hidden w-10 h-10 rounded-lg hover:bg-gray-100 flex items-center justify-center">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </div>
+
+  <div id="mobile-menu" class="md:hidden hidden border-t bg-white">
+    <nav class="px-6 py-4 space-y-4 text-sm font-semibold">
+      <a href="projects.html" class="block nav-link">Projects</a>
+      <a href="media.html" class="block nav-link">Media</a>
+      <a href="#contact" class="block text-center bg-orange-500 text-white py-3 rounded-full">
+        Get Help
+      </a>
+    </nav>
   </div>
 </header>
-<div class="h-1 bg-gradient-to-r from-blue-600 to-blue-800"></div>
 
+<div class="h-1 bg-gradient-to-r from-blue-600 to-blue-800"></div>
 
 <!-- HERO -->
 <section class="bg-gradient-to-br from-blue-600 to-blue-800 text-white">
-<div class="max-w-7xl mx-auto px-6 py-16 grid lg:grid-cols-2 gap-10 items-center">
+  <div class="max-w-7xl mx-auto px-6 py-16 md:py-20 grid lg:grid-cols-2 gap-10 items-center">
 
-    <!-- LEFT -->
     <div>
-      <h1 class="text-4xl md:text-5xl font-extrabold mb-6">
-        Reliable Help for Your Home<br>
-        <span class="text-orange-400">From Someone Local</span>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+        <span class="block">Reliable Help for Your Home</span>
+        <span class="block text-orange-400">From Someone Local</span>
       </h1>
       <p class="text-blue-100 text-lg mb-8">
-        We’re a family-owned local business helping neighbors with home services,
-        lawn care, and modern home technology.
+        Family-owned local services for home projects, lawn care, and modern home technology.
       </p>
       <div class="flex gap-4">
-        <a href="#services" class="bg-orange-500 px-6 py-3 rounded-full font-bold">
-          View Services
-        </a>
-        <a href="#contact" class="border border-white px-6 py-3 rounded-full">
-          Contact Cory
-        </a>
+        <a href="#services" class="bg-orange-500 px-6 py-3 rounded-full font-bold">View Services</a>
+        <a href="#contact" class="border border-white px-6 py-3 rounded-full">Contact Cory</a>
       </div>
     </div>
 
-    <!-- RIGHT -->
     <div class="flex justify-center">
-      <img src="assets/logos/logo.png" class="max-w-sm" alt="Just Ask Cory logo">
+      <img src="assets/logos/logo.png" class="max-w-sm">
     </div>
-
   </div>
 </section>
 
 <!-- SERVICES -->
-<section id="services" class="py-20 bg-white">
+<section id="services" class="py-16 md:py-20 bg-white">
   <div class="max-w-7xl mx-auto px-6">
-    <h2 class="text-4xl font-bold text-center mb-16">
-      How We Can Help
-    </h2>
+    <h2 class="text-4xl font-bold text-center mb-16">How We Can Help</h2>
 
     <div class="grid md:grid-cols-3 gap-10">
 
-      <!-- HOME SERVICES -->
-      <div class="bg-gray-50 rounded-2xl p-8 border-t-4 border-orange-500">
+      <div class="bg-gray-50 p-8 rounded-2xl border-t-4 border-orange-500">
         <h3 class="text-2xl font-bold text-blue-700 mb-4">🔧 Home Services</h3>
-        <p class="text-gray-700 mb-4">
-          Dependable help for projects and repairs around your home.
-        </p>
         <ul class="space-y-2 text-gray-600">
           <li>• Repairs & small projects</li>
           <li>• Assembly & installation</li>
-          <li>• Mounting TVs, shelves, fixtures</li>
+          <li>• Mounting & fixtures</li>
           <li>• General home help</li>
         </ul>
       </div>
 
-      <!-- LAWN CARE -->
-      <div class="bg-gray-50 rounded-2xl p-8 border-t-4 border-green-500">
+      <div class="bg-gray-50 p-8 rounded-2xl border-t-4 border-green-500">
         <h3 class="text-2xl font-bold text-green-700 mb-4">🌾 Lawn Care</h3>
-        <p class="text-gray-700 mb-4">
-          Consistent, honest lawn care from someone local.
-        </p>
         <ul class="space-y-2 text-gray-600">
           <li>• Mowing & edging</li>
           <li>• Seasonal cleanup</li>
@@ -120,74 +106,58 @@
         </ul>
       </div>
 
-      <!-- MEDIA SERVICES -->
-      <div class="bg-gray-50 rounded-2xl p-8 border-t-4 border-blue-500">
+      <div class="bg-gray-50 p-8 rounded-2xl border-t-4 border-blue-500">
         <h3 class="text-2xl font-bold text-blue-800 mb-4">📡 Media Services</h3>
-        <p class="text-gray-700 mb-4">
-          Modern home tech setup done cleanly and correctly.
-        </p>
         <ul class="space-y-2 text-gray-600">
-          <li>• Wi-Fi & home networking</li>
-          <li>• Security camera installation</li>
-          <li>• Home theater & TV setup</li>
+          <li>• Wi-Fi & networking</li>
+          <li>• Security cameras</li>
+          <li>• Home theater setup</li>
           <li>• Clean cable management</li>
         </ul>
         <a href="media.html" class="inline-block mt-4 text-orange-600 font-semibold">
-          See media projects →
+          See media work →
         </a>
       </div>
 
-    </div>
-
-    <p class="text-center text-sm text-gray-500 mt-12">
-      Services vary by availability. If you don’t see what you need — just ask.
-    </p>
-  </div>
-</section>
-
-<!-- TRUST STRIP -->
-<section class="bg-blue-50 py-12">
-  <div class="max-w-7xl mx-auto px-6 grid sm:grid-cols-3 gap-8 text-center">
-    <div>
-      <div class="text-orange-500 font-bold text-xl">Family-Owned</div>
-      <p class="text-gray-600 text-sm">Local people you can trust</p>
-    </div>
-    <div>
-      <div class="text-orange-500 font-bold text-xl">Honest Work</div>
-      <p class="text-gray-600 text-sm">No upselling, no nonsense</p>
-    </div>
-    <div>
-      <div class="text-orange-500 font-bold text-xl">Personal Service</div>
-      <p class="text-gray-600 text-sm">You deal directly with us</p>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="bg-gray-900 text-white py-20">
+<section id="contact" class="bg-gray-900 text-white py-16">
   <div class="max-w-lg mx-auto px-6">
-    <h2 class="text-3xl font-bold mb-8 text-center">Get in Touch</h2>
-
+    <h2 class="text-3xl font-bold mb-6 text-center">Get in Touch</h2>
     <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
       <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY">
-      <input class="w-full p-4 rounded text-gray-900" name="name" placeholder="Your Name" required>
+      <input class="w-full p-4 rounded text-gray-900" name="name" placeholder="Name" required>
       <input class="w-full p-4 rounded text-gray-900" name="email" placeholder="Email" required>
       <textarea class="w-full p-4 rounded text-gray-900" name="message" rows="4" placeholder="How can we help?" required></textarea>
-
-      <button class="w-full bg-orange-500 py-4 rounded font-bold hover:bg-orange-600">
-        Send Message
-      </button>
-
-      <p class="text-xs text-gray-400 text-center">
-        Local. Family-owned. We respond personally.
-      </p>
+      <button class="w-full bg-orange-500 py-4 rounded font-bold">Send Message</button>
     </form>
   </div>
 </section>
 
 <footer class="bg-black text-gray-500 text-center py-6 text-sm">
-  © 2025 Just Ask Cory. Proudly family-owned and local.
+  © 2025 Just Ask Cory. Family-owned and local.
 </footer>
+
+<script>
+  // Mobile menu
+  document.getElementById('menu-btn').onclick = () =>
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+
+  // Active nav
+  const path = location.pathname.split('/').pop();
+  document.querySelectorAll('.nav-link').forEach(link => {
+    if (link.getAttribute('href') === path) link.classList.add('active');
+  });
+
+  // Sticky shadow
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', () =>
+    header.classList.toggle('shadow-md', window.scrollY > 10)
+  );
+</script>
 
 </body>
 </html>
