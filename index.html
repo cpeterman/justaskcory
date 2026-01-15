@@ -23,7 +23,7 @@
   <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
 
     <div class="flex items-center gap-3">
-      <img src="assets/logos/logo-icon.png" class="w-9 h-9">
+      <img src="assets/logos/logo-icon.png" class="w-9 h-9" alt="Just Ask Cory Logo">
       <span class="font-bold text-lg tracking-tight">Just Ask Cory</span>
     </div>
 
@@ -35,7 +35,7 @@
       </a>
     </nav>
 
-    <button id="menu-btn" class="md:hidden w-10 h-10 rounded-lg hover:bg-gray-100 flex items-center justify-center">
+    <button id="menu-btn" type="button" aria-label="Toggle mobile menu" class="md:hidden w-10 h-10 rounded-lg hover:bg-gray-100 flex items-center justify-center">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
               d="M4 6h16M4 12h16M4 18h16"/>
@@ -75,7 +75,7 @@
     </div>
 
     <div class="flex justify-center">
-      <img src="assets/logos/logo.png" class="max-w-sm">
+      <img src="assets/logos/logo.png" class="max-w-sm" alt="Just Ask Cory Logo">
     </div>
   </div>
 </section>
@@ -132,7 +132,7 @@
       <input class="w-full p-4 rounded text-gray-900" name="name" placeholder="Name" required>
       <input class="w-full p-4 rounded text-gray-900" name="email" placeholder="Email" required>
       <textarea class="w-full p-4 rounded text-gray-900" name="message" rows="4" placeholder="How can we help?" required></textarea>
-      <button class="w-full bg-orange-500 py-4 rounded font-bold">Send Message</button>
+      <button type="submit" class="w-full bg-orange-500 py-4 rounded font-bold">Send Message</button>
     </form>
   </div>
 </section>
